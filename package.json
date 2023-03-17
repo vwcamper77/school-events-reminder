@@ -7,9 +7,9 @@
     "dev-server": "vite --open",
     "dev": "npm run dev-server",
     "dev-task": "vite",
-    "deploy": " npx @azure/static-web-apps-cli login --no-use-keychain && npx @azure/static-web-apps-cli deploy",
+    "deploy": "npx @azure/static-web-apps-cli login --no-use-keychain && npx @azure/static-web-apps-cli deploy",
     "build": "tsc && vite build",
-    "start": "npm run dev",
+    "start": "serve dist",
     "start-remote": "vite --host"
   },
   "author": "",
@@ -25,7 +25,8 @@
   "devDependencies": {
     "typescript": "^4.6.3",
     "vite": "^2.9.0",
-    "vite-plugin-pwa": "^0.11.13"
+    "vite-plugin-pwa": "^0.11.13",
+    "serve": "^12.0.0"
   },
   "prettier": {
     "tabWidth": 2,
