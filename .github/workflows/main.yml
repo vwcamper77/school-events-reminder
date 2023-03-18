@@ -37,11 +37,6 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: dist/
-      - name: Setup GitHub token
-        run: |
-    git config --global user.email "gavinferns@hotmail.com"
-    git config --global user.name "vwcamper77"
-    git config --global user.token ${{ secrets.GH_TOKEN }}
 
   deploy:
     needs: build
@@ -55,4 +50,15 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v1
-        
+ - name: Setup GitHub token
+  run: |
+    git config --global user.email "gavinferns@hotmail.com"
+    git config --global user.name "vwcamper77"
+    git config --global user.token ${{ secrets.GH_TOKEN }}
+    with:
+  app-name: 'kidscal'
+  slot-name: 'production'
+  publish-profile: ${{ secrets.AzureAppService_PublishProfile_2b0142e8479f4979bd0e63fa267ec146 }}
+  package: .
+  source-control-token: ${{ secrets.GITHUB_TOKEN }}
+
