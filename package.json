@@ -1,41 +1,28 @@
 {
-  "name": "pwa-starter",
-  "version": "0.0.1",
-  "description": "A starter kit for building PWAs!",
+  "name": "school-events-reminder",
+  "version": "1.0.0",
+  "description": "A web application for tracking school events and setting reminders",
   "main": "index.js",
   "scripts": {
-    "dev-server": "vite --open",
-    "dev": "npm run dev-server",
-    "dev-task": "vite",
-    "deploy": "npx @azure/static-web-apps-cli login --no-use-keychain && npx @azure/static-web-apps-cli deploy",
-    "build": "tsc && vite build",
-    "start": "serve dist",
-    "start-remote": "vite --host"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "school",
+    "events",
+    "reminder"
+  ],
+  "author": "Your Name",
   "license": "ISC",
   "dependencies": {
-    "@shoelace-style/shoelace": "^2.0.0-beta.82",
-    "@vaadin/router": "^1.7.4",
-    "lit": "^2.3.1",
-    "workbox-build": "^6.5.2",
-    "workbox-core": "^6.5.2",
-    "workbox-precaching": "^6.5.2"
+    "express": "^4.17.1",
+    "ejs": "^3.1.6",
+    "mongoose": "^6.3.3",
+    "dotenv": "^10.0.0"
   },
   "devDependencies": {
-    "typescript": "^4.6.3",
-    "vite": "^2.9.0",
-    "vite-plugin-pwa": "^0.11.13",
-    "serve": "^12.0.0"
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "useTabs": false,
-    "semi": true,
-    "singleQuote": true,
-    "quoteProps": "consistent",
-    "trailingComma": "es5",
-    "endOfLine": "crlf",
-    "bracketSpacing": true
+    "nodemon": "^2.0.15"
   }
 }
+
